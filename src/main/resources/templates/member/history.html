@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>마이페이지</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" th:href="@{/css/fragment/navbar.css}">
+        <link rel="stylesheet" th:href="@{/css/fragment/footer.css}">
+        <link rel="stylesheet" th:href="@{/css/member/history.css}">
+    </head>
+    <body>
+        <div th:replace="~{fragment/navbar.html :: navbar}" class="navbar"></div>
+
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <h2>마이페이지</h2>
+                <a href="/myInfo">개인정보수정</a>
+                <a href="#badge">내 뱃지 보기</a>
+                <a href="/myInfo/review">내 리뷰 보기</a>
+                <a href="/myInfo/history">이용내역조회</a>
+                <a href="/myInfo/list">내 리스트 관리</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="form-group">
+                    <select class="custom-select" id="selectMenu" onchange="filterData()">
+                        <option value="전체 내역">전체 내역</option>
+                        <option value="예약 내역">예약 내역</option>
+                        <option value="웨이팅 내역">웨이팅 내역</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" id="reservationData">
+                <!-- 예약 내역 데이터 -->
+                <div class="col-md-6 reservation-item" data-type="예약 내역" th:each="history : ${historyList}">
+                    <div class="card reservation-card">
+                        <div class="card-body">
+                            <div class="reservation-info">
+                                <div class="reservation-img">
+                                    <span th:if="${history.status} eq '리뷰쓰기' or ${history.status} eq '리뷰완료'">방문완료</span>
+                                    <span th:unless="${history.status} eq '리뷰쓰기' or ${history.status} eq '리뷰완료'" th:text="${history.status}"></span>
+                                    <img th:src="${history.imgUrl}" class="img-fluid" alt="img">
+                                </div>
+                                <div class="reservation-details">
+                                    <span th:text="${history.restaurantName}"></span>
+                                    <span th:text="${history.restaurantAddress}">양식 • 강남구</span>
+                                    <span class="badge badge-custom" th:text="${history.serviceType}">예약</span>
+                                    <span th:text="${history.updateAt}">18:30 예약</span>
+                                </div>
+                            </div>
+
+                            <button th:if="${history.status} eq '리뷰쓰기'" class="btn btn-outline-danger"
+                                    th:data-serviceNo="${history.serviceNo}"
+                                    th:data-serviceType="${history.serviceType}"
+                                    th:data-restaurantNo="${history.restaurantNo}"
+                            style="white-space: nowrap">
+                                리뷰 쓰기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 예약 데이터 -->
+            </div>
+        </div>
+        <div th:replace="~{fragment/footer.html :: footer}" class="footer"></div>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" th:src="@{/js/fragment/navbar.js}"></script>
+        <script type="text/javascript" th:src="@{/js/member/history.js}"></script>
+    </body>
+</html>
