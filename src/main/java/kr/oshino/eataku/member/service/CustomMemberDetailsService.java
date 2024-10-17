@@ -1,10 +1,10 @@
 package kr.oshino.eataku.member.service;
 
-import kr.oshino.eataku.member.entity.Member;
+import kr.oshino.eataku.member.model.entity.Member;
 import kr.oshino.eataku.member.model.dto.CustomMemberDetails;
 import kr.oshino.eataku.member.model.repository.MemberRepository;
-import kr.oshino.eataku.restaurant.admin.entity.RestaurantInfo;
-import kr.oshino.eataku.restaurant.admin.model.repository.RestaurantRepository;
+import kr.oshino.eataku.restaurant.model.entity.RestaurantInfo;
+import kr.oshino.eataku.restaurant.model.repository.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;

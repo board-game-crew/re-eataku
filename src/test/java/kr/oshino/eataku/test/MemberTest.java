@@ -1,9 +1,9 @@
 package kr.oshino.eataku.test;
 
 import kr.oshino.eataku.common.enums.AccountAuth;
-import kr.oshino.eataku.member.entity.Follow;
-import kr.oshino.eataku.member.entity.Member;
-import kr.oshino.eataku.member.entity.MemberLoginInfo;
+import kr.oshino.eataku.member.model.entity.Follow;
+import kr.oshino.eataku.member.model.entity.Member;
+import kr.oshino.eataku.member.model.entity.MemberLoginInfo;
 import kr.oshino.eataku.member.model.repository.FollowRepository;
 import kr.oshino.eataku.member.model.repository.MemberRepository;
 import org.junit.jupiter.api.*;

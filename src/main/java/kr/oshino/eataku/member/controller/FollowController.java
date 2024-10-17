@@ -1,7 +1,7 @@
 package kr.oshino.eataku.member.controller;
 
 import kr.oshino.eataku.list.entity.MyList;
-import kr.oshino.eataku.member.entity.Member;
+import kr.oshino.eataku.member.model.entity.Member;
 import kr.oshino.eataku.member.model.dto.CustomMemberDetails;
 import kr.oshino.eataku.member.model.dto.ZzupListDTO;
 import kr.oshino.eataku.member.service.FollowService;
@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
 @RequiredArgsConstructor

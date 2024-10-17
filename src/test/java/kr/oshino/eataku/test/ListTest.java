@@ -3,7 +3,7 @@
 //import kr.oshino.eataku.common.enums.AccountAuth;
 //import kr.oshino.eataku.list.entity.MyList;
 //import kr.oshino.eataku.list.model.repository.MyListRepository;
-//import kr.oshino.eataku.member.entity.Member;
+//import kr.oshino.eataku.member.model.entity.Member;
 //import kr.oshino.eataku.member.model.repository.MemberRepository;
 //import org.junit.jupiter.api.DisplayName;
 //import org.junit.jupiter.api.Test;

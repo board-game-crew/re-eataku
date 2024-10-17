@@ -1,13 +1,12 @@
 package kr.oshino.eataku.test.waiting;
 
-import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityNotFoundException;
 import kr.oshino.eataku.common.enums.StatusType;
-import kr.oshino.eataku.member.entity.Member;
+import kr.oshino.eataku.member.model.entity.Member;
 import kr.oshino.eataku.member.model.repository.MemberRepository;
-import kr.oshino.eataku.restaurant.admin.entity.RestaurantInfo;
-import kr.oshino.eataku.restaurant.admin.model.repository.RestaurantRepository;
+import kr.oshino.eataku.restaurant.model.entity.RestaurantInfo;
+import kr.oshino.eataku.restaurant.model.repository.RestaurantRepository;
 import kr.oshino.eataku.waiting.entity.Waiting;
 import kr.oshino.eataku.waiting.model.dto.requestDto.ReadWaitingRequestDto;
 import kr.oshino.eataku.waiting.model.dto.responseDto.ReadWaitingResponseDto;
@@ -17,9 +16,7 @@ import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.sql.Date;
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

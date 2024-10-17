@@ -1,10 +1,10 @@
 package kr.oshino.eataku.member.service;
 
-import kr.oshino.eataku.member.entity.Notification;
+import kr.oshino.eataku.member.model.entity.Notification;
 import kr.oshino.eataku.member.model.dto.NotificationDTO;
 import kr.oshino.eataku.member.model.repository.MemberRepository;
 import kr.oshino.eataku.member.model.repository.NotificationRepository;
-import kr.oshino.eataku.restaurant.admin.model.repository.RestaurantRepository;
+import kr.oshino.eataku.restaurant.model.repository.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

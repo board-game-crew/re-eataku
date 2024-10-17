@@ -1,11 +1,9 @@
 package kr.oshino.eataku.list.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import kr.oshino.eataku.list.model.vo.RestaurantList;
-import kr.oshino.eataku.list.model.vo.UserList;
-import kr.oshino.eataku.member.entity.Member;
+import kr.oshino.eataku.member.model.entity.Member;
 import lombok.*;
 
 import java.util.List;

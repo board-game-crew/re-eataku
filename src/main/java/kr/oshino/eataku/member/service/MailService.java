@@ -2,7 +2,7 @@ package kr.oshino.eataku.member.service;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
-import kr.oshino.eataku.member.entity.EmailVerifCode;
+import kr.oshino.eataku.member.model.entity.EmailVerifCode;
 import kr.oshino.eataku.member.model.repository.EmailVerifCodeRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

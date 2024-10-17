@@ -2,7 +2,7 @@
 //
 //import jakarta.transaction.Transactional;
 //import kr.oshino.eataku.common.enums.AccountAuth;
-//import kr.oshino.eataku.reservation.user.entity.Reservation;
+//import kr.oshino.eataku.reservation.model.entity.Reservation;
 //import kr.oshino.eataku.reservation.user.repository.ReservationRepository;
 //import org.junit.jupiter.api.AfterEach;
 //import org.junit.jupiter.api.DisplayName;

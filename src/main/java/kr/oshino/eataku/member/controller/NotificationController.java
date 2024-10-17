@@ -1,6 +1,5 @@
 package kr.oshino.eataku.member.controller;
 
-import kr.oshino.eataku.member.entity.Notification;
 import kr.oshino.eataku.member.model.dto.CustomMemberDetails;
 import kr.oshino.eataku.member.model.dto.NotificationDTO;
 import kr.oshino.eataku.member.service.NotificationService;
