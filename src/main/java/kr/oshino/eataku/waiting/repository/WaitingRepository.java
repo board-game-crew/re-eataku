@@ -1,15 +1,14 @@
 package kr.oshino.eataku.waiting.repository;
 
 import kr.oshino.eataku.common.enums.StatusType;
-import kr.oshino.eataku.member.entity.Member;
-import kr.oshino.eataku.restaurant.admin.entity.RestaurantInfo;
+import kr.oshino.eataku.member.model.entity.Member;
+import kr.oshino.eataku.restaurant.model.entity.RestaurantInfo;
 import kr.oshino.eataku.waiting.entity.Waiting;
 import kr.oshino.eataku.waiting.model.dto.responseDto.ReadWaitingResponseDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;

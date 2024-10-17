@@ -1,11 +1,9 @@
 package kr.oshino.eataku.list.model.repository;
 
 import kr.oshino.eataku.list.entity.MyList;
-import kr.oshino.eataku.list.model.dto.FollowListDto;
 import kr.oshino.eataku.list.model.dto.FollowerDTO;
-import kr.oshino.eataku.list.model.dto.RestaurantWithRatingDTO;
 import kr.oshino.eataku.list.model.vo.RestaurantList;
-import kr.oshino.eataku.member.entity.Member;
+import kr.oshino.eataku.member.model.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

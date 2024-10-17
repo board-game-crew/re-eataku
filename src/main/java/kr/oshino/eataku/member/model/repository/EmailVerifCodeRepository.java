@@ -1,6 +1,6 @@
 package kr.oshino.eataku.member.model.repository;
 
-import kr.oshino.eataku.member.entity.EmailVerifCode;
+import kr.oshino.eataku.member.model.entity.EmailVerifCode;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmailVerifCodeRepository extends JpaRepository<EmailVerifCode, Long> {

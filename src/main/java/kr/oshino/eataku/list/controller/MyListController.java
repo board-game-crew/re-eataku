@@ -2,14 +2,11 @@ package kr.oshino.eataku.list.controller;
 
 import kr.oshino.eataku.list.entity.MyList;
 import kr.oshino.eataku.list.model.dto.CopyListDTO;
-import kr.oshino.eataku.list.model.dto.FollowListDto;
 import kr.oshino.eataku.list.model.dto.FollowerDTO;
 import kr.oshino.eataku.list.model.dto.RestaurantWithRatingDTO;
 import kr.oshino.eataku.list.model.service.MyListService;
 import kr.oshino.eataku.list.model.vo.RestaurantList;
 import kr.oshino.eataku.member.model.dto.CustomMemberDetails;
-import kr.oshino.eataku.reservation.user.model.dto.responseDto.RestaurantDetailsResponseDto;
-import kr.oshino.eataku.restaurant.admin.model.dto.RestaurantInfoDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

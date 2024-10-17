@@ -1,12 +1,6 @@
 package kr.oshino.eataku.member.model.repository;
 
-import jakarta.persistence.ColumnResult;
-import jakarta.persistence.ConstructorResult;
-import jakarta.persistence.SqlResultSetMapping;
-import kr.oshino.eataku.member.entity.Member;
-import kr.oshino.eataku.member.model.dto.HeartDTO;
-import kr.oshino.eataku.member.model.dto.HistoryDTO;
-import kr.oshino.eataku.search.model.dto.SearchResultDTO;
+import kr.oshino.eataku.member.model.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

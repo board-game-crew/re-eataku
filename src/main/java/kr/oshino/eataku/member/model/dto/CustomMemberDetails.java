@@ -1,11 +1,9 @@
 package kr.oshino.eataku.member.model.dto;
 
-import kr.oshino.eataku.member.entity.Member;
-import kr.oshino.eataku.restaurant.admin.entity.RestaurantInfo;
-import lombok.RequiredArgsConstructor;
+import kr.oshino.eataku.member.model.entity.Member;
+import kr.oshino.eataku.restaurant.model.entity.RestaurantInfo;
 import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;

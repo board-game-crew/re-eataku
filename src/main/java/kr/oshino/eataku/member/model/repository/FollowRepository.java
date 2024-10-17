@@ -1,7 +1,7 @@
 package kr.oshino.eataku.member.model.repository;
 
-import kr.oshino.eataku.member.entity.Follow;
-import kr.oshino.eataku.member.entity.Member;
+import kr.oshino.eataku.member.model.entity.Follow;
+import kr.oshino.eataku.member.model.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface FollowRepository extends JpaRepository<Follow, Long> {

@@ -1,8 +1,7 @@
 package kr.oshino.eataku.test;
 
-import kr.oshino.eataku.common.enums.HashTag;
-import kr.oshino.eataku.restaurant.admin.entity.RestaurantInfo;
-import kr.oshino.eataku.restaurant.admin.model.repository.RestaurantRepository;
+import kr.oshino.eataku.restaurant.model.entity.RestaurantInfo;
+import kr.oshino.eataku.restaurant.model.repository.RestaurantRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

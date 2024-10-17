@@ -2,9 +2,9 @@ package kr.oshino.eataku.member.service;
 
 import kr.oshino.eataku.list.entity.MyList;
 import kr.oshino.eataku.list.model.repository.MyListRepository;
-import kr.oshino.eataku.member.entity.Follow;
-import kr.oshino.eataku.member.entity.Member;
-import kr.oshino.eataku.member.entity.Notification;
+import kr.oshino.eataku.member.model.entity.Follow;
+import kr.oshino.eataku.member.model.entity.Member;
+import kr.oshino.eataku.member.model.entity.Notification;
 import kr.oshino.eataku.member.model.repository.FollowRepository;
 import kr.oshino.eataku.member.model.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;

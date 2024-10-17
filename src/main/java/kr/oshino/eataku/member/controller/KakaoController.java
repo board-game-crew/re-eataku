@@ -3,7 +3,6 @@ package kr.oshino.eataku.member.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
-import kr.oshino.eataku.member.entity.Member;
 import kr.oshino.eataku.member.model.dto.CustomMemberDetails;
 import kr.oshino.eataku.member.model.dto.KakaoUserInfoResponseDTO;
 import kr.oshino.eataku.member.model.dto.MemberDTO;
@@ -19,7 +18,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 

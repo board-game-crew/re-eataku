@@ -1,9 +1,9 @@
 package kr.oshino.eataku.ws.service;
 
-import kr.oshino.eataku.member.entity.Member;
+import kr.oshino.eataku.member.model.entity.Member;
 import kr.oshino.eataku.member.model.repository.MemberRepository;
-import kr.oshino.eataku.restaurant.admin.entity.RestaurantInfo;
-import kr.oshino.eataku.restaurant.admin.model.repository.RestaurantRepository;
+import kr.oshino.eataku.restaurant.model.entity.RestaurantInfo;
+import kr.oshino.eataku.restaurant.model.repository.RestaurantRepository;
 import kr.oshino.eataku.ws.entity.ChatMessage;
 import kr.oshino.eataku.ws.entity.ChatRoomMember;
 import kr.oshino.eataku.ws.model.dto.ChatMessageDTO;
