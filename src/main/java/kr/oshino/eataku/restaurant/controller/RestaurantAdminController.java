@@ -6,7 +6,6 @@ import kr.oshino.eataku.common.enums.HashTag;
 import kr.oshino.eataku.member.model.dto.CustomMemberDetails;
 import kr.oshino.eataku.reservation.model.dto.*;
 import kr.oshino.eataku.reservation.service.ReservationUserService;
-import kr.oshino.eataku.restaurant.admin.model.dto.*;
 import kr.oshino.eataku.restaurant.service.RestaurantAdminService;
 import kr.oshino.eataku.restaurant.model.dto.*;
 import lombok.RequiredArgsConstructor;

@@ -2,11 +2,24 @@ spring:
   application:
     name: eataku
 
+  datasource:
+    url: jdbc:mysql://db-eataku.ct2o2ceg2rjv.ap-southeast-2.rds.amazonaws.com:3306/eatakudb
+    username: admin
+    password: eataku12
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate:
+        '[format_sql]': true
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${gmail}
-    password: ${password}
+    username: noReply.eataku@gmail.com
+    password: jacvjbumalubfrcu
     properties:
       mail:
         smtp:
@@ -15,45 +28,26 @@ spring:
           starttls:
             enable: true
 
-  datasource:
-    url: ${dbUrl}
-    username: ${username}
-    password: ${password}
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    show-sql: true
-    database: mysql
-    properties:
-      hibernate:
-        '[format_sql]': true
-
 coolsms:
   api:
-    key: ${coolSmsKey}
-    secret: ${coolSmsSecret}
-    number: ${coolSmsNumber}
+    key: "NCSSWFPPRCG3IEF7"
+    secret: "ZOAXIYXOCXX5KSBH3BK00WPPGLSOQQZS"
+    number: 01090184610
 
 cloud:
   aws:
     credentials:
-      access-key: ${ncpAccessKey}
-      secret-key: ${ncpSecretKey}
+      access-key: ncp_iam_BPASKRWxSTDaP4FehYOM
+      secret-key: ncp_iam_BPKSKRJHikqfZbqxTJPD0W8tvPqhNKMS6T
     stack:
       auto: false
     region:
       static: kr-standard
     s3:
-      endpoint: https://kr.object.ncloudstorage.com
-      bucket: ${ncpbucket}
-
-logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
+      endpoint: https://kr.object.ncloudstorage.com/
+      bucket: oshino-file
 
 kakao:
-  client_id: ${id}
-  redirect_uri: ${uri}
+  client_id: 09e07802c737310d172f056dfbaf323b
+  #  redirect_uri: https://eataku.kr/callback
+  redirect_uri: http://localhost:8080/callback
