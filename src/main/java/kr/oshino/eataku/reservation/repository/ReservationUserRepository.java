@@ -54,7 +54,7 @@ public interface ReservationUserRepository extends JpaRepository<Reservation,Int
      * @param memberNo
      * @return
      */
-    @Query("SELECT new kr.oshino.eataku.reservation.user.model.dto.responseDto.ReadReservationResponseDto( " +
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.ReadReservationResponseDto( " +
             "r.reservationNo, r.partySize, r.reservationStatus, " +
             "m.name , m.nickname , m.phone, m.memberNo, ri.restaurantName) " +
             "FROM Reservation r " +
@@ -90,7 +90,7 @@ public interface ReservationUserRepository extends JpaRepository<Reservation,Int
     /***
      * 상세정보
      */
-    @Query("SELECT new kr.oshino.eataku.reservation.user.model.dto.responseDto.RestaurantInfoDetails(" +
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.RestaurantInfoDetails(" +
             "r.restaurantName, r.restaurantAddress, r.imgUrl, r.restaurantNo,r.contact,r.description) " +
             "FROM RestaurantInfo r " +
             "WHERE r.restaurantNo = :restaurantNo")
@@ -103,7 +103,7 @@ public interface ReservationUserRepository extends JpaRepository<Reservation,Int
      * @param restaurantNo
      * @return
      */
-    @Query("SELECT new kr.oshino.eataku.reservation.user.model.dto.responseDto.ReviewDetails ( "  +
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.ReviewDetails ( "  +
             "m.name , re.reviewContent , m.imgUrl, re.scope, re.reviewDate) " +
             "FROM Review re " +
             "JOIN re.member m " +
@@ -132,7 +132,7 @@ public interface ReservationUserRepository extends JpaRepository<Reservation,Int
      * @param restaurantNo
      * @return
      */
-    @Query("SELECT new kr.oshino.eataku.reservation.user.model.dto.responseDto.MapDto(a.xCoordinate ,a.yCoordinate)"+
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.MapDto(a.xCoordinate ,a.yCoordinate)"+
             "FROM RestaurantInfo a " +
             "WHERE a.restaurantNo = :restaurantNo")
     List<MapDto> getMapLocation(@Param("restaurantNo") Long restaurantNo);
@@ -143,7 +143,7 @@ public interface ReservationUserRepository extends JpaRepository<Reservation,Int
      *
      * @return
      */
-    @Query("SELECT new kr.oshino.eataku.reservation.user.model.dto.responseDto.MenuDto(m.imgUrl,m.description,m.menuName) " +
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.MenuDto(m.imgUrl,m.description,m.menuName) " +
             "FROM Menu m WHERE m.restaurantNo.restaurantNo = :restaurantNo")
     List<MenuDto> getMenu(@Param("restaurantNo") Long restaurantNo);
 
@@ -153,7 +153,7 @@ public interface ReservationUserRepository extends JpaRepository<Reservation,Int
      * @param restaurantNo
      * @return
      */
-    @Query("SELECT new kr.oshino.eataku.reservation.user.model.dto.responseDto.ReviewImgDto(re.imgUrl)" +
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.ReviewImgDto(re.imgUrl)" +
             "FROM Review re " +
             "WHERE  re.restaurantInfo.restaurantNo = :restaurantNo AND re.imgUrl IS NOT NULL ")
     List<ReviewImgDto> getImg(Long restaurantNo);

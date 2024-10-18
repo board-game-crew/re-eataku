@@ -14,7 +14,7 @@ import java.util.List;
 @Repository
 public interface ReservationAdminRepository extends JpaRepository<Reservation, Integer> {
 
-    @Query("SELECT new kr.oshino.eataku.reservation.admin.model.dto.ReservationCountDTO(r.reservationDate " +
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.ReservationCountDTO(r.reservationDate " +
             ", COUNT(r.reservationNo) ) " +
             "FROM Reservation r " +
             "WHERE r.restaurantInfo.restaurantNo = :restaurantNo " +
@@ -26,7 +26,7 @@ public interface ReservationAdminRepository extends JpaRepository<Reservation, I
 
 
 
-    @Query("SELECT new kr.oshino.eataku.reservation.admin.model.dto.ReservationDTO(" +
+    @Query("SELECT new kr.oshino.eataku.reservation.model.dto.ReservationDTO(" +
             "r.reservationNo, m.memberNo, m.name, m.phone, " +
             "rest.restaurantNo, r.partySize, r.reservationDate, r.reservationTime)" +
             "FROM Reservation r " +
