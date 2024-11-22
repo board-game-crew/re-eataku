@@ -40,12 +40,27 @@ public class WaitingAdminController {
     public String waitingManagementPage(Model model) {
 
         // 나중에 세션으로 변경해야 함
+        // restful 한 세션으로 변경
         CustomMemberDetails member = (CustomMemberDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Long restaurantNo = member.getRestaurantNo();
         model.addAttribute("restaurantNo", restaurantNo);
 
         return "restaurant/waitingStatus";
     }
+
+    /***
+     *
+     * restful 한 코드 jwt 를 사용한 토큰 기반 인증 방식
+     * JWT 가 restful 한 코드 작성 방식이라고 하네요
+     * 일단 주석 처리
+     * @return
+     */
+//    @GetMapping("/waitingList")
+//    public String waitingManagementPage(@RequestHeader("X-Restaurant-No") Long restaurantNo, Model model) {
+//        model.addAttribute("restaurantNo", restaurantNo);
+//        return "restaurant/waitingStatus";
+//    }
+
 
 
 
